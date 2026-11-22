@@ -1,0 +1,53 @@
+KET QUA THUC NGHIEM - ITA202 TITANIC
+=======================================================
+So dong du lieu: 891
+So cot du lieu: 15
+So mau train: 712; so mau test: 179
+
+SO SANH MO HINH:
+              model  accuracy  precision   recall       f1
+      Random Forest  0.804469   0.803571 0.652174 0.720000
+Logistic Regression  0.793296   0.775862 0.652174 0.708661
+      Decision Tree  0.776536   0.763636 0.608696 0.677419
+                KNN  0.759777   0.724138 0.608696 0.661417
+
+Mo hinh tot nhat theo Accuracy: Random Forest
+Confusion Matrix:
+[[99 11]
+ [24 45]]
+
+Classification report:
+              precision    recall  f1-score   support
+
+           0       0.80      0.90      0.85       110
+           1       0.80      0.65      0.72        69
+
+    accuracy                           0.80       179
+   macro avg       0.80      0.78      0.78       179
+weighted avg       0.80      0.80      0.80       179
+
+Tham so GridSearchCV:
+{
+  "KNN": {
+    "best_params": {
+      "model__n_neighbors": 5,
+      "model__weights": "uniform"
+    },
+    "best_cv_accuracy": 0.8076135132473162
+  },
+  "Decision Tree": {
+    "best_params": {
+      "model__max_depth": 5,
+      "model__min_samples_split": 5
+    },
+    "best_cv_accuracy": 0.8118290160543682
+  },
+  "Random Forest": {
+    "best_params": {
+      "model__max_depth": 10,
+      "model__min_samples_split": 5,
+      "model__n_estimators": 100
+    },
+    "best_cv_accuracy": 0.8188220230473752
+  }
+}

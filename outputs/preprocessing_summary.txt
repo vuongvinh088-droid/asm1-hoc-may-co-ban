@@ -1,0 +1,11 @@
+ITA202 - KET QUA TIEN XU LY DU LIEU TITANIC
+=======================================================
+So dong du lieu goc: 891
+So cot du lieu goc: 15
+So mau train: 712
+So mau test: 179
+So cot sau One-Hot Encoding (khong tinh nhan): 10
+Xu ly thieu: median cho cot so, most_frequent cho cot phan loai.
+Ngoai le: gioi han theo IQR; cot so: StandardScaler.
+Cot phan loai: One-Hot Encoding.
+Da chia train/test truoc khi fit tien xu ly de tranh data leakage.
